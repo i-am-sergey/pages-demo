@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Elias Grünfeld — vCard</title>
+  <meta name="description" content="Elias Grünfeld — UX designer and part-time mountain goat based in Innsbruck, Austria." />
+  <link rel="preload" as="image" href="assets/background-tirol.jpg" />
+  <link rel="preload" as="image" href="assets/headshot.jpg" />
+  <!-- Fonts: Inter for text, Fraunces for display -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="index.css" />
+</head>
+<body>
+  <main class="page">
+    <div class="bg" aria-hidden="true"></div>
+
+    <article class="card" aria-label="vCard for Elias Grünfeld">
+      <div class="avatar-wrap">
+        <img src="assets/headshot.jpg" alt="Portrait of Elias Grünfeld" class="avatar" width="160" height="160" loading="eager" />
+      </div>
+
+      <h1 class="name">Elias Grünfeld</h1>
+
+      <p class="tagline">UX designer and part-time mountain goat based in Innsbruck, Austria</p>
+
+      <div class="bio">
+        <p>I design clear, user-friendly interfaces with a focus on simplicity and flow.</p>
+          <p>Outside work, you’ll usually find me hiking alpine trails, recording nature sounds, or crafting ambient
+              mixes for SoundCloud.</p>
+          <p>I believe good design — like a good trail — should guide you without getting in the way.</p>
+      </div>
+
+      <nav class="social" aria-label="Social links">
+        <a href="#" class="social-link" aria-label="LinkedIn">
+          <span class="icon icon-linkedin" aria-hidden="true"></span>
+        </a>
+        <a href="#" class="social-link" aria-label="Instagram">
+          <span class="icon icon-instagram" aria-hidden="true"></span>
+        </a>
+        <a href="#" class="social-link" aria-label="SoundCloud">
+          <span class="icon icon-soundcloud" aria-hidden="true"></span>
+        </a>
+      </nav>
+    </article>
+
+    <footer class="foot" aria-hidden="true">
+      <small>© <span id="year"></span> Elias Grünfeld</small>
+    </footer>
+  </main>
+
+  <script>
+    // Accessibility-friendly reduced motion: keep animations subtle.
+    (function(){
+      var y = document.getElementById('year');
+      if (y) y.textContent = new Date().getFullYear();
+    })();
+  </script>
+</body>
+</html>
